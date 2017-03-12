@@ -41,45 +41,45 @@ predict1 =  0.97374
 predict2 =  1.1973
 ```
 
-### gradient_descent_demo.m
-> how learning speed impact Gradient Descent?
+### learning_rate.m
+> how learning rate impact Gradient Descent?
 
-#### learning speed: 0.01:
+#### learning rate: 0.01:
 ![](../figure/linear-regression-gradient_descent_demo_1.jpg)
 
-#### learning speed: 0.03:
+#### learning rate: 0.03:
 ![](../figure/linear-regression-gradient_descent_demo_2.jpg)
 
-#### learning speed: 0.05:
+#### learning rate: 0.05:
 ![](../figure/linear-regression-gradient_descent_demo_3.jpg)
 
-#### learning speed: 0.07:
+#### learning rate: 0.07:
 ![](../figure/linear-regression-gradient_descent_demo_4.jpg)
 
 #### result:
 ```
-learning speed: 0.01
+learning rate: 0.01
 theta =
 
    0.750153
    0.063883
 
 num_iterations =  10761
-learning speed: 0.03
+learning rate: 0.03
 theta =
 
    0.750153
    0.063883
 
 num_iterations =  3584
-learning speed: 0.05
+learning rate: 0.05
 theta =
 
    0.750153
    0.063883
 
 num_iterations =  2149
-learning speed: 0.07
+learning rate: 0.07
 theta =
 
    0.750153

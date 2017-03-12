@@ -1,4 +1,4 @@
-% how learning speed impact Gradient Descent
+% how learning rate impact Gradient Descent
 
 clear all; close all; clc
 x = load('ex2x.dat'); y = load('ex2y.dat');
@@ -10,7 +10,7 @@ x = [ones(m, 1) x]; % Add a column of ones to x
 
 alpha = [0.01:0.02:0.07]; 
 
-for num_alpha = 1:length(alpha) % tune learning speed
+for num_alpha = 1:length(alpha) % tune learning rate
   
   theta = zeros(size(x(1,:)))'; % initialize fitting parameters
   num_iterations = 0;
@@ -36,9 +36,9 @@ for num_alpha = 1:length(alpha) % tune learning speed
       num_iterations = num_iterations + 1;
   end
   % print theta to screen
-  disp(sprintf('learning speed: %s',num2str(alpha(num_alpha))))
+  disp(sprintf('learning rate: %s',num2str(alpha(num_alpha))))
   theta
-  num_iterations % max iteration depends on learning speed
+  num_iterations % max iteration depends on learning rate
   
   % Grid over which we will calculate J
   theta0_vals = linspace(-3, 3, 100);
@@ -63,7 +63,7 @@ for num_alpha = 1:length(alpha) % tune learning speed
   % Plot J_vals as 15 contours spaced logarithmically between 0.01 and 100
   contour(theta0_vals, theta1_vals, J_vals, logspace(-2, 2, 15))
   xlabel('\theta_0'); ylabel('\theta_1');
-  title(strcat('learning speed: ',num2str(alpha(num_alpha))));
+  title(strcat('learning rate: ',num2str(alpha(num_alpha))));
   hold on;
   plot(theta_0,theta_1)
  end
